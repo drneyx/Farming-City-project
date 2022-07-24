@@ -153,20 +153,20 @@
                           <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ url('food-and-beverage', 'beverage') }}">Beverage</a></li>
                             <li><a href="{{ url('food-and-beverage', 'soft-drinks') }}">Soft drinks</a></li>
-                            <li><a href="{{ url('food-and-beverage', 'beverage') }}">Cereals</a></li>
-                            <li><a href="{{ url('food-and-beverage', 'beverage') }}">Tubers</a></li>
-                            <li><a href="{{ url('food-and-beverage', 'beverage') }}">Fish & Meat</a></li>
+                            <li><a href="{{ url('food-and-beverage', 'cereals') }}">Cereals</a></li>
+                            <li><a href="{{ url('food-and-beverage', 'tubers') }}">Tubers</a></li>
+                            <li><a href="{{ url('food-and-beverage', 'fish-meat') }}">Fish & Meat</a></li>
                           </ul>
                       </li>
                       <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">LABORATORY EQUIPMENT & SUPPLIES <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="apparatii.html">Apparatii</a></li>
-                          <li><a href="#">Balances</a></li>
-                          <li><a href="#">Models</a></li>
-                          <li><a href="#">Microscopes</a></li>
-                          <li><a href="#">Chemicals and Reagents</a></li>
-                          <li><a href="#">Specimens</a></li>
+                          <li><a href="{{ url('laboratory-equipment-and-supplies', 'apparatii') }}">Apparatii</a></li>
+                          <li><a href="{{ url('laboratory-equipment-and-supplies', 'balances') }}">Balances</a></li>
+                          <li><a href="{{ url('laboratory-equipment-and-supplies', 'models') }}">Models</a></li>
+                          <li><a href="{{ url('laboratory-equipment-and-supplies', 'microscopes') }}">Microscopes</a></li>
+                          <li><a href="{{ url('laboratory-equipment-and-supplies', 'chemicals-and-reagents') }}">Chemicals and Reagents</a></li>
+                          <li><a href="{{ url('laboratory-equipment-and-supplies', 'specimens') }}">Specimens</a></li>
                         </ul>
                     </li>
                       <li class="nav-item dropdown">
