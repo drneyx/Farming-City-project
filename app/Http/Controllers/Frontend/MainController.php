@@ -18,6 +18,11 @@ class MainController extends Controller
         return view('frontend.template.list', compact('title', 'items'));
     }
 
+    public function detail($slug) {
+        $item = Item::where('slug', $slug)->first();
+        return view('frontend.template.detail', compact('item'));
+    }
+
     public function firstImage($id) {
         $gallery = Gallery::where('item_id', $id)->first();
 
