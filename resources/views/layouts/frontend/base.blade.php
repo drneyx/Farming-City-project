@@ -140,10 +140,10 @@
                       <li class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">CLEANING MATERIALS <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('cleaning-materials', 'cleaning-materials') }}">Safety Gears</a></li>
-                            <li><a href="#">Soap & detergents</a></li>
-                            <li><a href="#">Waste Management Facilities</a></li>
-                            <li><a href="#">Cleaning tools</a></li>
+                            <li><a href="{{ url('cleaning-materials', 'safety-gears') }}">Safety Gears</a></li>
+                            <li><a href="{{ url('cleaning-materials', 'soap-and-dertegents') }}">Soap & detergents</a></li>
+                            <li><a href="{{ url('cleaning-materials', 'waste-management-facilities') }}">Waste Management Facilities</a></li>
+                            <li><a href="{{ url('cleaning-materials', 'cleaning-tools') }}">Cleaning tools</a></li>
                             
                           </ul>
                       </li>
@@ -151,38 +151,38 @@
                       <li class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">FOOD & BEVERAGE <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
-                            <li><a href="beverage.html">Beverage</a></li>
-                            <li><a href="#">Soft drinks</a></li>
-                            <li><a href="#">Cereals</a></li>
-                            <li><a href="#">Tubers</a></li>
-                            <li><a href="#">Fish & Meat</a></li>
+                            <li><a href="{{ url('food-and-beverage', 'beverage') }}">Beverage</a></li>
+                            <li><a href="{{ url('food-and-beverage', 'soft-drinks') }}">Soft drinks</a></li>
+                            <li><a href="{{ url('food-and-beverage', 'cereals') }}">Cereals</a></li>
+                            <li><a href="{{ url('food-and-beverage', 'tubers') }}">Tubers</a></li>
+                            <li><a href="{{ url('food-and-beverage', 'fish-meat') }}">Fish & Meat</a></li>
                           </ul>
                       </li>
                       <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">LABORATORY EQUIPMENT & SUPPLIES <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="apparatii.html">Apparatii</a></li>
-                          <li><a href="#">Balances</a></li>
-                          <li><a href="#">Models</a></li>
-                          <li><a href="#">Microscopes</a></li>
-                          <li><a href="#">Chemicals and Reagents</a></li>
-                          <li><a href="#">Specimens</a></li>
+                          <li><a href="{{ url('laboratory-equipment-and-supplies', 'apparatii') }}">Apparatii</a></li>
+                          <li><a href="{{ url('laboratory-equipment-and-supplies', 'balances') }}">Balances</a></li>
+                          <li><a href="{{ url('laboratory-equipment-and-supplies', 'models') }}">Models</a></li>
+                          <li><a href="{{ url('laboratory-equipment-and-supplies', 'microscopes') }}">Microscopes</a></li>
+                          <li><a href="{{ url('laboratory-equipment-and-supplies', 'chemicals-and-reagents') }}">Chemicals and Reagents</a></li>
+                          <li><a href="{{ url('laboratory-equipment-and-supplies', 'specimens') }}">Specimens</a></li>
                         </ul>
                     </li>
                       <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SPORTS ANGD GAMES<i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
-                              <li><a href="#">Untensils</a></li>
-                              <li><a href="gadget.htm">Gadgets</a></li>
-                              <li><a href="#">Gas cylinders</a></li>
+                              <li><a href="{{ url('sports-and-games', 'untensils') }}">Untensils</a></li>
+                              <li><a href="{{ url('sports-and-games', 'gadgets') }}">Gadgets</a></li>
+                              <li><a href="{{ url('sports-and-games', 'gas-cylinders') }}">Gas cylinders</a></li>
                         </ul>
                       </li>
                       <li class="nav-item"><a  class="nav-link dropdown-toggle" data-toggle="dropdown" href="contact.html">OTHERS</a>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Beddings</a></li>
-                          <li><a href="#">Clothing Materials</a></li>
-                          <li><a href="#">Mattresses</a></li>
-                          <li><a href="#">Sports Wears</a></li>
+                          <li><a href="{{ url('others', 'beddings') }}">Beddings</a></li>
+                          <li><a href="{{ url('others', 'gas-cylinders') }}">Clothing Materials</a></li>
+                          <li><a href="{{ url('others', 'gas-cylinders') }}">Mattresses</a></li>
+                          <li><a href="{{ url('others', 'gas-cylinders') }}">Sports Wears</a></li>
                         </ul>
                       </li>
                     </ul>
