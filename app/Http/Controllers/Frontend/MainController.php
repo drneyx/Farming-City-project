@@ -12,40 +12,10 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     public function index($slug) {
-        $main_category = MainCategory::where('slug', $slug)->first();
-        $categories = Category::where('main_category_id', $main_category->id)->with('items')->paginate(9);
-
-        // $url = url()->current();
-        // if (str_contains($url, 'local-materials')) {
-        //     $title = "Construction Local materials";
-        //     $nav = "local";
-        // } else if (str_contains($url, 'mechanical-and-electrical')) {
-        //     $title = "Mechanical and Electrical Materials";
-        //     $nav = "mechanical";
-        // }else if (str_contains($url, 'electronic-tools')) {
-        //     $title = "Electronic Tools";
-        //     $nav = "electronic";
-        // }else if (str_contains($url, 'vehicle-and-trucks')) {
-        //     $title = "Vehicle and Trucks";
-        //     $nav = "vehicle";
-        // }else if (str_contains($url, 'land-movers')) {
-        //     $title = "Land Movers";
-        //     $nav = "land";
-        // }else if (str_contains($url, 'industrial-materials')) {
-        //     $title = "Construction Industrial Materials";
-        //     $nav = "industrial";
-        // }else if (str_contains($url, 'plumbing-materials')) {
-        //     $title = "Plumbing Materials";
-        //     $nav = "plumbing";
-        // }else if (str_contains($url, 'electrical-materials')) {
-        //     $title = "Electrical Materials";
-        //     $nav = "electrical";
-        // }else if (str_contains($url, 'other-services')) {
-        //     $title = "Other Services";
-        //     $nav = "services";
-        // }
-
-        return view('frontend.template.list');
+        $category = Category::where('slug', $slug)->first();
+        $items = Item::where('category_id', $category->id)->get();
+        $title = $category->name;
+        return view('frontend.template.list', compact('title', 'items'));
     }
 
     public function firstImage($id) {

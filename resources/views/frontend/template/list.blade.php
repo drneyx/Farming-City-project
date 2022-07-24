@@ -6,12 +6,11 @@
           <div class="row">
             <div class="col-lg-12">
                 <div class="banner-heading">
-                  <h1 class="banner-title">Service</h1>
+                  <h1 class="banner-title">{{$title}}</h1>
                   <nav aria-label="breadcrumb">
                       <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a href="">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{{url('/')}}">Services</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">All Services</li>
+                        <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="">{{$title}}</a></li>
                       </ol>
                   </nav>
                 </div>

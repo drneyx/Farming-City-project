@@ -140,7 +140,7 @@
                       <li class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">CLEANING MATERIALS <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('cleaning-materials', 'cleaning-materials') }}">Safety Gears</a></li>
+                            <li><a href="{{ url('cleaning-materials', 'safety-gears') }}">Safety Gears</a></li>
                             <li><a href="#">Soap & detergents</a></li>
                             <li><a href="#">Waste Management Facilities</a></li>
                             <li><a href="#">Cleaning tools</a></li>
