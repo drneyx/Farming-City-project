@@ -172,17 +172,17 @@
                       <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SPORTS ANGD GAMES<i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
-                              <li><a href="#">Untensils</a></li>
-                              <li><a href="gadget.htm">Gadgets</a></li>
-                              <li><a href="#">Gas cylinders</a></li>
+                              <li><a href="{{ url('sports-and-games', 'untensils') }}">Untensils</a></li>
+                              <li><a href="{{ url('sports-and-games', 'gadgets') }}">Gadgets</a></li>
+                              <li><a href="{{ url('sports-and-games', 'gas-cylinders') }}">Gas cylinders</a></li>
                         </ul>
                       </li>
                       <li class="nav-item"><a  class="nav-link dropdown-toggle" data-toggle="dropdown" href="contact.html">OTHERS</a>
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Beddings</a></li>
-                          <li><a href="#">Clothing Materials</a></li>
-                          <li><a href="#">Mattresses</a></li>
-                          <li><a href="#">Sports Wears</a></li>
+                          <li><a href="{{ url('others', 'beddings') }}">Beddings</a></li>
+                          <li><a href="{{ url('others', 'gas-cylinders') }}">Clothing Materials</a></li>
+                          <li><a href="{{ url('others', 'gas-cylinders') }}">Mattresses</a></li>
+                          <li><a href="{{ url('others', 'gas-cylinders') }}">Sports Wears</a></li>
                         </ul>
                       </li>
                     </ul>
