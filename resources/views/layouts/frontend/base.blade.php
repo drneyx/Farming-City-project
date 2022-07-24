@@ -141,9 +141,9 @@
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">CLEANING MATERIALS <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ url('cleaning-materials', 'safety-gears') }}">Safety Gears</a></li>
-                            <li><a href="#">Soap & detergents</a></li>
-                            <li><a href="#">Waste Management Facilities</a></li>
-                            <li><a href="#">Cleaning tools</a></li>
+                            <li><a href="{{ url('cleaning-materials', 'soap-and-dertegents') }}">Soap & detergents</a></li>
+                            <li><a href="{{ url('cleaning-materials', 'waste-management-facilities') }}">Waste Management Facilities</a></li>
+                            <li><a href="{{ url('cleaning-materials', 'cleaning-tools') }}">Cleaning tools</a></li>
                             
                           </ul>
                       </li>
@@ -151,11 +151,11 @@
                       <li class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">FOOD & BEVERAGE <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
-                            <li><a href="beverage.html">Beverage</a></li>
-                            <li><a href="#">Soft drinks</a></li>
-                            <li><a href="#">Cereals</a></li>
-                            <li><a href="#">Tubers</a></li>
-                            <li><a href="#">Fish & Meat</a></li>
+                            <li><a href="{{ url('food-and-beverage', 'beverage') }}">Beverage</a></li>
+                            <li><a href="{{ url('food-and-beverage', 'soft-drinks') }}">Soft drinks</a></li>
+                            <li><a href="{{ url('food-and-beverage', 'beverage') }}">Cereals</a></li>
+                            <li><a href="{{ url('food-and-beverage', 'beverage') }}">Tubers</a></li>
+                            <li><a href="{{ url('food-and-beverage', 'beverage') }}">Fish & Meat</a></li>
                           </ul>
                       </li>
                       <li class="nav-item dropdown">

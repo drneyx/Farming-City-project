@@ -24,6 +24,30 @@ Route::prefix('cleaning-materials')->group(function() {
     Route::get('cleaning-materials/{slug}','Frontend\MainController@categoryItems');
 });
 
+Route::prefix('food-and-beverage')->group(function() {
+    Route::get('/{slug}','Frontend\MainController@index');
+    Route::get('cleaning-materials/{slug}','Frontend\MainController@categoryItems');
+});
+
+Route::prefix('laboratory-equipment-and-supplies')->group(function() {
+    Route::get('/{slug}','Frontend\MainController@index');
+    Route::get('cleaning-materials/{slug}','Frontend\MainController@categoryItems');
+});
+
+Route::prefix('sports-and-games')->group(function() {
+    Route::get('/{slug}','Frontend\MainController@index');
+    Route::get('cleaning-materials/{slug}','Frontend\MainController@categoryItems');
+});
+
+Route::prefix('others')->group(function() {
+    Route::get('/{slug}','Frontend\MainController@index');
+    Route::get('cleaning-materials/{slug}','Frontend\MainController@categoryItems');
+});
+
+Route::prefix('item-details')->group(function() {
+    Route::get('/{slug}','Frontend\MainController@detail');
+});
+
 // backend
 
 Route::get('/dashboard', function () {
