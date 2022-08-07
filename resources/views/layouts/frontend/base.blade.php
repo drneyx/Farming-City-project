@@ -177,12 +177,12 @@
                               <li><a href="{{ url('sports-and-games', 'gas-cylinders') }}">Gas cylinders</a></li>
                         </ul>
                       </li>
-                      <li class="nav-item"><a  class="nav-link dropdown-toggle" data-toggle="dropdown" href="contact.html">OTHERS</a>
+                      <li class="nav-item dropdown"><a  class="nav-link dropdown-toggle" data-toggle="dropdown" >OTHERS<i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="{{ url('others', 'beddings') }}">Beddings</a></li>
-                          <li><a href="{{ url('others', 'gas-cylinders') }}">Clothing Materials</a></li>
-                          <li><a href="{{ url('others', 'gas-cylinders') }}">Mattresses</a></li>
-                          <li><a href="{{ url('others', 'gas-cylinders') }}">Sports Wears</a></li>
+                          <li><a href="{{ url('others', 'clothing-materials') }}">Clothing Materials</a></li>
+                          <li><a href="{{ url('others', 'mattresses') }}">Mattresses</a></li>
+                          <li><a href="{{ url('others', 'sports-wears') }}">Sports Wears</a></li>
                         </ul>
                       </li>
                     </ul>
