@@ -27,8 +27,11 @@
         <div class="col-lg-4 col-md-6 mb-5">
           <a href="{{ url('item-details', $item->slug) }}">
           <div class="ts-service-box">
+              @php
+                  $image = app('app\Http\Controllers\Frontend\MainController')->firstImage($item->id);
+              @endphp
               <div class="ts-service-image-wrapper">
-                <img loading="lazy" class="w-100" src="../frontend/images/news/news2.jpg" alt="service-image">
+                <img loading="lazy" class="w-100" src="{{ url($image) }}" onerror=this.src="{{url('images/noimage.jpg')}}" alt="service-image">
               </div>
               <div class="d-flex">
                 <div class="ts-service-info">
