@@ -309,7 +309,6 @@
                                 table.row(el.parents('tr'))
                                     .remove()
                                     .draw();
-
                                 toastr.success(data.message);
                             }
                         }
