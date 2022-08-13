@@ -34,8 +34,8 @@
   <link rel="stylesheet" href="{{ url ('frontend/css/style.css')}}">
   <style type="text/css">
     .image{
-      width: 100%;
-      height: 20rem;
+      height: 200px;
+      width: 250px;
     }
   </style>
 

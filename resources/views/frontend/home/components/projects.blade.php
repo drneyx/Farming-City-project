@@ -15,7 +15,7 @@
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="latest-post">
                 <div class="latest-post-media">
-                  <a href="news-single.html" class="latest-post-img">
+                  <a href="#" class="latest-post-img">
                       <img loading="lazy" class="img-fluid" src="{{ url($new->image) }}" alt="img">
                   </a>
                 </div>
