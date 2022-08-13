@@ -13,13 +13,15 @@ class MainController extends Controller
 {
     public function index($slug) {
         $category = Category::where('slug', $slug)->first();
-        $items = Item::where('category_id', $category->id)->get();
+        $items = Item::where('category_id', $category->id)->with('images')->paginate(9);
         $title = $category->name;
+        // return $items;
         return view('frontend.template.list', compact('title', 'items'));
     }
 
     public function detail($slug) {
-        $item = Item::where('slug', $slug)->first();
+        $item = Item::where('slug', $slug)->with('images')->first();
+        
         return view('frontend.template.detail', compact('item'));
     }
 

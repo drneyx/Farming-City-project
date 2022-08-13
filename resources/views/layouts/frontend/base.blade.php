@@ -14,11 +14,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
   <!-- Favicon
-================================================== -->
+  ================================================== -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <!-- CSS
-================================================== -->
+    ================================================== -->
   <!-- Bootstrap -->
   <link rel="stylesheet" href="{{ url ('frontend/plugins/bootstrap/bootstrap.min.css') }}">
   <!-- FontAwesome -->
@@ -32,6 +32,12 @@
   <link rel="stylesheet" href="{{ url ('frontend/plugins/colorbox/colorbox.css')}}">
   <!-- Template styles-->
   <link rel="stylesheet" href="{{ url ('frontend/css/style.css')}}">
+  <style type="text/css">
+    .image{
+      height: 200px;
+      width: 250px;
+    }
+  </style>
 
 </head>
 <body>
@@ -177,12 +183,12 @@
                               <li><a href="{{ url('sports-and-games', 'gas-cylinders') }}">Gas cylinders</a></li>
                         </ul>
                       </li>
-                      <li class="nav-item"><a  class="nav-link dropdown-toggle" data-toggle="dropdown" href="contact.html">OTHERS</a>
+                      <li class="nav-item dropdown"><a  class="nav-link dropdown-toggle" data-toggle="dropdown" >OTHERS<i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="{{ url('others', 'beddings') }}">Beddings</a></li>
-                          <li><a href="{{ url('others', 'gas-cylinders') }}">Clothing Materials</a></li>
-                          <li><a href="{{ url('others', 'gas-cylinders') }}">Mattresses</a></li>
-                          <li><a href="{{ url('others', 'gas-cylinders') }}">Sports Wears</a></li>
+                          <li><a href="{{ url('others', 'clothing-materials') }}">Clothing Materials</a></li>
+                          <li><a href="{{ url('others', 'mattresses') }}">Mattresses</a></li>
+                          <li><a href="{{ url('others', 'sports-wears') }}">Sports Wears</a></li>
                         </ul>
                       </li>
                     </ul>

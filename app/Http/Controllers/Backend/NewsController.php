@@ -83,4 +83,10 @@ class NewsController extends Controller
 
         return ['success' => true, 'message' => 'Updated Successfully'];
     }
+
+    public function delete($id) {
+
+        News::find($id)->delete();
+        return ['success' => true, 'message' => 'Deleted Successfully'];
+    }
 }
