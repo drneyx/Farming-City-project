@@ -14,10 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 // frontend
-Route::get('/', function() {
-    return redirect('/home');
-});
-Route::get('/home', 'Frontend\HomeController@index')->name('home');
+
+Route::get('/', 'Frontend\HomeController@index')->name('home');
 
 Route::prefix('cleaning-materials')->group(function() {
     Route::get('/{slug}','Frontend\MainController@index');

@@ -14,11 +14,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
   <!-- Favicon
-================================================== -->
+  ================================================== -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <!-- CSS
-================================================== -->
+    ================================================== -->
   <!-- Bootstrap -->
   <link rel="stylesheet" href="{{ url ('frontend/plugins/bootstrap/bootstrap.min.css') }}">
   <!-- FontAwesome -->
