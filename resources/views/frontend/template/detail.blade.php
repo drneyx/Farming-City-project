@@ -1,5 +1,6 @@
 @extends('layouts.frontend.base')
 @section('contents')
+
 <div id="banner-area" class="banner-area" style="background-image: url('../frontend/images/banner/banner1.jpg');">
     <div class="banner-text">
       <div class="container">
@@ -27,9 +28,10 @@
                   @forelse ($item->images as $image)
                       <div class="item" style="background-image:url(images/slider-pages/slide-page1.jpg)">
                         <div class="container">
-                            <div class="box-slider-content">
+                          <img src="{{ url($image->image) }}" class="image" onerror=this.src="{{url('images/noimage.jpg')}}" alt="">
+                            <div class="box-slider-content ">
                               <div class="box-slider-text">
-                                  <h2 class="box-slide-title">{{ $active == 0 ? 'active' : '' }}</h2>
+                                  <h2 class="box-slide-title">{{ $active }}</h2>
                               </div>    
                             </div>
                         </div>

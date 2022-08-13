@@ -31,7 +31,7 @@
                   $image = app('app\Http\Controllers\Frontend\MainController')->firstImage($item->id);
               @endphp
               <div class="ts-service-image-wrapper">
-                <img loading="lazy" class="w-100" src="{{ url($image) }}" onerror=this.src="{{url('images/noimage.jpg')}}" alt="service-image">
+                <img loading="lazy" class="w-100 image" src="{{ url($image) }}" onerror=this.src="{{url('images/noimage.jpg')}}" alt="service-image">
               </div>
               <div class="d-flex">
                 <div class="ts-service-info">
@@ -43,14 +43,19 @@
           </div><!-- Service1 end -->
           </a>
         </div><!-- Col 1 end -->
-
         @empty
             <p class="text-center px-5 mb-4">Sorry! There is no data fo now!</p>
         @endforelse
-  
-           
-  
       </div><!-- Main row end -->
     </div><!-- Conatiner end -->
+
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
   </section><!-- Main container end -->
   @endsection

@@ -20,7 +20,8 @@ class MainController extends Controller
     }
 
     public function detail($slug) {
-        $item = Item::where('slug', $slug)->first();
+        $item = Item::where('slug', $slug)->with('images')->first();
+        
         return view('frontend.template.detail', compact('item'));
     }
 

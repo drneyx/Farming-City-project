@@ -32,6 +32,12 @@
   <link rel="stylesheet" href="{{ url ('frontend/plugins/colorbox/colorbox.css')}}">
   <!-- Template styles-->
   <link rel="stylesheet" href="{{ url ('frontend/css/style.css')}}">
+  <style type="text/css">
+    .image{
+      width: 100%;
+      height: 20rem;
+    }
+  </style>
 
 </head>
 <body>
