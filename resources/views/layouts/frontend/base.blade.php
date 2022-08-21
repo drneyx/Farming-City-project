@@ -88,7 +88,7 @@
             <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
                 <a class="d-block" href="index.html">
                    {{-- <img src="{{ url('frontend/images/FARMING1.jpg') }}" alt="Constra">  --}}
-                  <h1 class="logo"><a href="index.html">Farming City<span>.</span></a></h1>
+                  <h1 class="logo"><a href="index.html">Farming City<span></span></a></h1>
                 </a>
             </div><!-- logo end -->
   
@@ -98,7 +98,8 @@
                     <div class="info-box">
                       <div class="info-box-content">
                           <p class="info-box-title">Call Us</p>
-                          <p class="info-box-subtitle"><a href="tel:(+9) 847-291-4353">(+255) 712900734 / 788645399</a></p>
+                          <p class="info-box-subtitle"><a href="tel:(+9) 847-291-4353">(+255)788645399</a></p>
+                          <p class="info-box-subtitle"><a href="tel:(+9) 847-291-4353">(+255)712900734</a></p>
                       </div>
                     </div>
                   </li>
@@ -107,14 +108,23 @@
                       <div class="info-box-content">
                           <p class="info-box-title">Email Us</p>
                           <p class="info-box-subtitle"><a href="mailto:office@Constra.com">farmingcit@gmail.com</a></p>
+                          <p class="info-box-subtitle"><a href="mailto:office@Constra.com">info@farmingcity.co.tz</a></p>
                       </div>
                     </div>
                   </li>
-                  <li class="last">
+                  <li class="info-box">
                     <div class="info-box last">
                       <div class="info-box-content">
                           <p class="info-box-title">TIN</p>
-                          <p class="info-box-subtitle">1230 400 213</p>
+                          <p class="info-box-subtitle">149-984-151</p>
+                      </div>
+                    </div>
+                  </li>
+                   <li class="last">
+                    <div class="info-box last">
+                      <div class="info-box-content">
+                          <p class="info-box-title">VRN</p>
+                          <p class="info-box-subtitle">40-047746</p>
                       </div>
                     </div>
                   </li>
