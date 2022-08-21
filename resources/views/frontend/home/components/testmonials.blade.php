@@ -68,36 +68,36 @@
   
           <div class="col-lg-6 mt-5 mt-lg-0">
   
-            <h3 class="column-title">Happy Clients</h3>
+            <h3 class="column-title">Satisfied Clients</h3>
   
             <div class="row all-clients">
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client1.png" alt="clients-logo" /></a>
+                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client1.png" alt="MOI" /></a>
                   </figure>
                 </div><!-- Client 1 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client2.png" alt="clients-logo" /></a>
+                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client2.png" alt="MNH" /></a>
                   </figure>
                 </div><!-- Client 2 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client3.png" alt="clients-logo" /></a>
+                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client3.png" alt="TRA" /></a>
                   </figure>
                 </div><!-- Client 3 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client4.png" alt="clients-logo" /></a>
+                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client4.png" alt="TANROAD" /></a>
                   </figure>
                 </div><!-- Client 4 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client5.png" alt="clients-logo" /></a>
+                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client5.png" alt="DDC" /></a>
                   </figure>
                 </div><!-- Client 5 end -->
   

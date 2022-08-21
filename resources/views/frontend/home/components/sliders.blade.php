@@ -16,7 +16,7 @@
       </div>
     </div>
   
-    <div class="banner-carousel-item" style="background-image:url(frontend/images/slider-main/best-gadgets-lead-1626470273.jpeg)">
+    <div class="banner-carousel-item" style="background-image:url(frontend/images/slider-main/3.jpg)">
       <div class="slider-content text-left">
           <div class="container h-100">
             <div class="row align-items-center h-100">
