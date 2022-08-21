@@ -88,7 +88,7 @@
             <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
                 <a class="d-block" href="index.html">
                    {{-- <img src="{{ url('frontend/images/FARMING1.jpg') }}" alt="Constra">  --}}
-                  <h5 class="logo"><a class="logo-top" href="index.html">Farming City Company LTD<span></span></a></h5>
+                  <h1 class="logo"><a class="logo-top" href="index.html">Farming City Company LTD<span></span></a></h1>
                 </a>
             </div><!-- logo end -->
   
