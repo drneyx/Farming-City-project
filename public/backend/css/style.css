@@ -2524,6 +2524,12 @@ table.dataTable thead .sorting_desc_disabled {
 .html5buttons {
   float: right;
 }
+
+.logo-top{
+  font-size: 14px !important;
+  font-weight: bold;
+  color: black;
+}
 .html5buttons a {
   border: 1px solid #e7eaec;
   background: #fff;
@@ -4939,7 +4945,7 @@ table.table-mail tr td {
 }
 .ibox-heading h3 {
   font-weight: 200;
-  font-size: 24px;
+  font-size: 17px;
 }
 .ibox-title h5 {
   display: inline-block;
@@ -5691,7 +5697,7 @@ body.mini-navbar.fixed-sidebar .logo-element {
 }
 .logo-name {
   color: #e6e6e6;
-  font-size: 180px;
+  font-size: 10px;
   font-weight: 800;
   letter-spacing: -10px;
   margin-bottom: 0;

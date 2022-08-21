@@ -68,7 +68,7 @@
   
           <div class="col-lg-6 mt-5 mt-lg-0">
   
-            <h3 class="column-title">Happy Clients</h3>
+            <h3 class="column-title">Satisfied Clients</h3>
   
             <div class="row all-clients">
                 <div class="col-sm-4 col-6">
