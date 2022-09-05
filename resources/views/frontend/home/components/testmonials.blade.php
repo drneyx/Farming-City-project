@@ -73,37 +73,37 @@
             <div class="row all-clients">
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client1.png" alt="MOI" /></a>
+                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/MOI.jpg" alt="MOI" /></a>
                   </figure>
                 </div><!-- Client 1 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client2.png" alt="MNH" /></a>
+                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/download.png" alt="MNH" /></a>
                   </figure>
                 </div><!-- Client 2 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client3.png" alt="TRA" /></a>
+                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/logo_nct.jpg" alt="TRA" /></a>
                   </figure>
                 </div><!-- Client 3 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client4.png" alt="TANROAD" /></a>
+                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/MUHAS-2.png" alt="TANROAD" /></a>
                   </figure>
                 </div><!-- Client 4 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client5.png" alt="DDC" /></a>
+                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/tan.jpg" alt="DDC" /></a>
                   </figure>
                 </div><!-- Client 5 end -->
   
                 <div class="col-sm-4 col-6">
                   <figure class="clients-logo">
-                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/clients/client6.png" alt="clients-logo" /></a>
+                      <a href="#!"><img loading="lazy" class="img-fluid" src="images/MOI.jpg" alt="clients-logo" /></a>
                   </figure>
                 </div><!-- Client 6 end -->
   

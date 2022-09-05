@@ -124,7 +124,7 @@
                     <div class="info-box last">
                       <div class="info-box-content">
                           <p class="info-box-title">VRN</p>
-                          <p class="info-box-subtitle">40-047746</p>
+                          <p class="info-box-subtitle">40-047746-V</p>
                       </div>
                     </div>
                   </li>
@@ -186,7 +186,7 @@
                         </ul>
                     </li>
                       <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SPORTS ANGD GAMES<i class="fa fa-angle-down"></i></a>
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">KITCHEN APPLIANCES<i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
                               <li><a href="{{ url('sports-and-games', 'untensils') }}">Untensils</a></li>
                               <li><a href="{{ url('sports-and-games', 'gadgets') }}">Gadgets</a></li>
