@@ -107,8 +107,8 @@
                     <div class="info-box">
                       <div class="info-box-content">
                           <p class="info-box-title">Email Us</p>
-                          <p class="info-box-subtitle"><a href="mailto:office@Constra.com">farmingcit@gmail.com</a></p>
-                          <p class="info-box-subtitle"><a href="mailto:office@Constra.com">info@farmingcity.co.tz</a></p>
+                          <p class="info-box-subtitle"><a href="mailto:farmingcit@gmail.com">farmingcit@gmail.com</a></p>
+                          <p class="info-box-subtitle"><a href="mailto:info@farmingcity.co.tz">info@farmingcity.co.tz</a></p>
                       </div>
                     </div>
                   </li>
