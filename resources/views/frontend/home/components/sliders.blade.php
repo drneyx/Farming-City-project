@@ -32,6 +32,59 @@
           </div>
       </div>
     </div>
+
+    <div class="banner-carousel-item" style="background-image:url(frontend/images/slider-main/4.jpg)">
+      <div class="slider-content text-left">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-md-12">
+                  <h2 class="slide-title-box" data-animation-in="slideInDown">World Class Service</h2>
+                  <h3 class="slide-title" data-animation-in="fadeIn">When Service Matters</h3>
+                  <h3 class="slide-sub-title" data-animation-in="slideInLeft">Your Choice is FARMING CITY</h3>
+                  <p data-animation-in="slideInRight">
+                      <a href="#" class="slider btn btn-primary border">Our Services</a>
+                  </p>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="banner-carousel-item" style="background-image:url(frontend/images/slider-main/5.jpg)">
+      <div class="slider-content text-left">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-md-12">
+                  <h2 class="slide-title-box" data-animation-in="slideInDown">World Class Service</h2>
+                  <h3 class="slide-title" data-animation-in="fadeIn">When Service Matters</h3>
+                  <h3 class="slide-sub-title" data-animation-in="slideInLeft">Your Choice is FARMING CITY</h3>
+                  <p data-animation-in="slideInRight">
+                      <a href="#" class="slider btn btn-primary border">Our Services</a>
+                  </p>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="banner-carousel-item" style="background-image:url(frontend/images/slider-main/6.jpg)">
+      <div class="slider-content text-left">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-md-12">
+                  <h2 class="slide-title-box" data-animation-in="slideInDown">World Class Service</h2>
+                  <h3 class="slide-title" data-animation-in="fadeIn">When Service Matters</h3>
+                  <h3 class="slide-sub-title" data-animation-in="slideInLeft">Your Choice is FARMING CITY</h3>
+                  <p data-animation-in="slideInRight">
+                      <a href="#" class="slider btn btn-primary border">Our Services</a>
+                  </p>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
   
     
   </div>

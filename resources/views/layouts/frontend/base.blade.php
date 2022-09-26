@@ -98,8 +98,8 @@
                     <div class="info-box">
                       <div class="info-box-content">
                           <p class="info-box-title">Call Us</p>
-                          <p class="info-box-subtitle"><a href="tel:(+9) 847-291-4353">(+255)788645399</a></p>
-                          <p class="info-box-subtitle"><a href="tel:(+9) 847-291-4353">(+255)712900734</a></p>
+                          <p class="info-box-subtitle"><a href="tel:+255788645399">(+255)788645399</a></p>
+                          <p class="info-box-subtitle"><a href="tel:+255712900734">(+255)712900734</a></p>
                       </div>
                     </div>
                   </li>
@@ -107,8 +107,8 @@
                     <div class="info-box">
                       <div class="info-box-content">
                           <p class="info-box-title">Email Us</p>
-                          <p class="info-box-subtitle"><a href="mailto:office@Constra.com">farmingcit@gmail.com</a></p>
-                          <p class="info-box-subtitle"><a href="mailto:office@Constra.com">info@farmingcity.co.tz</a></p>
+                          <p class="info-box-subtitle"><a href="mailto:farmingcit@gmail.com">farmingcit@gmail.com</a></p>
+                          <p class="info-box-subtitle"><a href="mailto:info@farmingcity.co.tz">info@farmingcity.co.tz</a></p>
                       </div>
                     </div>
                   </li>
