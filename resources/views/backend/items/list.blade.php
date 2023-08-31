@@ -171,7 +171,11 @@
                             {data: 'id', name: 'id', visible: false},
                             {data: 'name', name: 'name'},
                             {data: 'slug', name: 'slug'},
-                            {data: 'description', name: 'description'},
+                            {data: 'description', name: 'description', 
+                                render: function(data) {
+                                    return limit($('<span>'+data+'</span>').text(), 200);
+                                }
+                            },
                             {data: 'action', name: 'action'},
                         ]
                     });
@@ -228,30 +232,30 @@
                 })
 
 
-                $(document).on('click','.btn-edit',function(){
-                    btnSave.hide();
-                    $('#files').hide();
-                    btnUpdate.show();
+                // $(document).on('click','.btn-edit',function(){
+                //     btnSave.hide();
+                //     $('#files').hide();
+                //     btnUpdate.show();
 
 
-                    modal.find('.modal-title').text('Update Item')
-                    modal.find('.modal-footer button[type="submit"]').text('Update')
+                //     modal.find('.modal-title').text('Update Item')
+                //     modal.find('.modal-footer button[type="submit"]').text('Update')
 
-                    var rowData =  table.row($(this).parents('tr')).data()
+                //     var rowData =  table.row($(this).parents('tr')).data()
 
-                    form.find('input[name="id"]').val(rowData.id)
-                    form.find('input[name="name"]').val(rowData.name)
-                    form.find('input[name="slug"]').val(rowData.slug)
-                    form.find('select[name="category_id"]').val(rowData.category_id)
-                    form.find('textarea[name="description"]').val(rowData.description)
-                    tinyMCE.activeEditor.setContent(rowData.description);
-                    console.log(tinyMCE.activeEditor.getContent())
+                //     form.find('input[name="id"]').val(rowData.id)
+                //     form.find('input[name="name"]').val(rowData.name)
+                //     form.find('input[name="slug"]').val(rowData.slug)
+                //     form.find('select[name="category_id"]').val(rowData.category_id)
+                //     form.find('textarea[name="description"]').val(rowData.description)
+                //     tinyMCE.activeEditor.setContent(rowData.description);
+                //     console.log(tinyMCE.activeEditor.getContent())
 
-                    modal.modal()
-                })
+                //     modal.modal()
+                // })
 
                 btnUpdate.click(function(){
-                    if(!confirm("Are you sure?")) return;
+                    if(!confirm("Are you sure you want to perform this action?")) return;
                     var formData = form.serialize()+'&_method=PUT&_token='+token
                     var updateId = form.find('input[name="id"]').val()
                     $.ajax({
@@ -273,7 +277,7 @@
 
 
                 $(document).on('click','.btn-delete',function(){
-                    if(!confirm("Are you sure?")) return;
+                    if(!confirm("Are you sure you want to perform this action?")) return;
 
                     var rowid = $(this).data('rowid')
                     var el = $(this)
@@ -338,7 +342,11 @@
                         });
                     }
                 })
-            })
+            });
+
+            function limit (string = '', limit = 0) {  
+                return string.substring(0, limit)
+            }
         </script>
     @endsection
 </x-app-layout>

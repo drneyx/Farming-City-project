@@ -226,7 +226,7 @@
                 })
 
                 btnUpdate.click(function(){
-                    if(!confirm("Are you sure?")) return;
+                    if(!confirm("Are you sure you want to perform this action?")) return;
                     var formData = form.serialize()+'&_method=PUT&_token='+token
                     var updateId = form.find('input[name="id"]').val()
                     $.ajax({
@@ -248,7 +248,7 @@
 
 
                 $(document).on('click','.btn-delete',function(){
-                    if(!confirm("Are you sure?")) return;
+                    if(!confirm("Are you sure you want to perform this action?")) return;
 
                     var rowid = $(this).data('rowid')
                     var el = $(this)

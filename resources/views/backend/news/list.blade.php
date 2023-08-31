@@ -15,8 +15,12 @@
             height: 100px;
             object-fit: cover;
         }
+        .hide {
+            display: none;
+        }
     </style>
     <div class="row">
+        <input type="text" id="selected_id" class="hide">
         <div class="col-md-12">
             <div class="ibox">
                 <div class="ibox-title">
@@ -63,10 +67,16 @@
                                     </tr>
                             </tbody>
                         </table>
+
+                        <!-- Image preview -->
+                        <div class="">
+                            @include('backend.news.modals.image-preview')
+                        </div>
+
                         <!-- Modal -->
-                        <div class="modal" tabindex="-1" role="dialog">
+                        <div class="modal my_modal" tabindex="-1" role="dialog">
                             <div class="modal-dialog modal-lg" role="document">
-                                <form class="form" id="newsForm" action="" method="POST" enctype="multipart/form-data">
+                                <form class="form_news" id="newsForm" action="" method="POST" enctype="multipart/form-data">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title">Add News</h5>
@@ -96,7 +106,7 @@
                                             </div>
                                             <div class="form-group" id="previewimg" style="display: none;">
                                                 <div class="col-md-3">
-                                                    <img id="output_image" class="w-100 thumbnail" style="object-fit: cover; height: 15vh;" />
+                                                    <img id="output_image_show" class="w-100 thumbnail" style="object-fit: cover; height: 15vh;" />
                                                 </div>
                                             </div>
 
@@ -124,10 +134,10 @@
         // preview image
         function preview_image(event){
             $('#previewimg').show();
-            document.getElementById('output_image').style.display='block';
+            document.getElementById('output_image_show').style.display='block';
             var reader = new FileReader();
             reader.onload = function(){
-                var output = document.getElementById('output_image');
+                var output = document.getElementById('output_image_show');
                 output.src = reader.result;
             }
             reader.readAsDataURL(event.target.files[0]);
@@ -174,8 +184,8 @@
 
                 $.noConflict();
                 var token = $('meta[name="csrf-token"]').attr('content')
-                var modal = $('.modal')
-                var form = $('.form')
+                var modal = $('.my_modal')
+                var form = $('.form_news')
                 var btnAdd = $('.add'),
                     btnSave = $('.btn-save'),
                     btnUpdate = $('.btn-update');
@@ -194,7 +204,11 @@
                             },
                             {data: 'title', name: 'title'},
                             {data: 'description', name: 'description'},
-                            {data: 'body', name: 'body'},
+                            {data: 'body', name: 'body',
+                                render: function(data) {
+                                    return $('<span>'+data+'</span>').text();
+                                }
+                            },
                             {data: 'action', name: 'action'},
                         ]
                     });
@@ -247,30 +261,30 @@
                 })
 
 
-                $(document).on('click','.btn-edit',function(){
-                    btnSave.hide();
-                    $('#files').hide();
-                    btnUpdate.show();
+                // $(document).on('click','.btn-edit',function(){
+                //     btnSave.hide();
+                //     $('#files').hide();
+                //     btnUpdate.show();
 
 
-                    modal.find('.modal-title').text('Update Item')
-                    modal.find('.modal-footer button[type="submit"]').text('Update')
+                //     modal.find('.modal-title').text('Update Item')
+                //     modal.find('.modal-footer button[type="submit"]').text('Update')
 
-                    var rowData =  table.row($(this).parents('tr')).data()
+                //     var rowData =  table.row($(this).parents('tr')).data()
 
-                    form.find('input[name="id"]').val(rowData.id)
-                    form.find('input[name="title"]').val(rowData.title)
-                    form.find('input[name="slug"]').val(rowData.slug)
-                    form.find('select[name="image"]').val(rowData.image)
-                    form.find('textarea[name="description"]').val(rowData.description)
-                    tinyMCE.activeEditor.setContent(rowData.body);
-                    console.log(tinyMCE.activeEditor.getContent())
+                //     form.find('input[name="id"]').val(rowData.id)
+                //     form.find('input[name="title"]').val(rowData.title)
+                //     form.find('input[name="slug"]').val(rowData.slug)
+                //     form.find('select[name="image"]').val(rowData.image)
+                //     form.find('textarea[name="description"]').val(rowData.description)
+                //     tinyMCE.activeEditor.setContent(rowData.body);
+                //     console.log(tinyMCE.activeEditor.getContent())
 
-                    modal.modal()
-                })
+                //     modal.modal()
+                // })
 
                 btnUpdate.click(function(){
-                    if(!confirm("Are you sure?")) return;
+                    if(!confirm("Are you sure you want to perform this action?")) return;
                     var formData = form.serialize()+'&_method=PUT&_token='+token
                     var updateId = form.find('input[name="id"]').val()
                     $.ajax({
@@ -292,7 +306,7 @@
 
 
                 $(document).on('click','.btn-delete',function(){
-                    if(!confirm("Are you sure?")) return;
+                    if(!confirm("Are you sure you want to perform this action?")) return;
 
                     var rowid = $(this).data('rowid')
                     var el = $(this)
@@ -309,6 +323,7 @@
                                 table.row(el.parents('tr'))
                                     .remove()
                                     .draw();
+
                                 toastr.success(data.message);
                             }
                         }
@@ -356,6 +371,20 @@
                         });
                     }
                 })
+
+                // view image
+                $(document).on('click', '.view-img', function() {
+                    var id = $(this).attr('data-itm')
+                    var image = $(this).attr('image')
+                    
+                    $('#form').attr('action', '/news/changeImage/'+ id)
+                    $('#selected_id').val(id);
+                    $('.inmodal').attr('id', id)
+                    $('.prvw').attr('id', 'preview'+id)
+                    $('.new_image').attr('id', 'newimg'+id)
+                    $('#img').attr('src', image)
+                    $('.inmodal').modal()
+                });
             })
         </script>
     @endsection

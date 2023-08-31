@@ -1,10 +1,42 @@
 <x-app-layout>
     <style>
-        .image-container {
+        .img-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* .img-container img {
+            width: 100%;
+            height: auto;
+        } */
+        .btns {
+            display: none;
+        }
+
+        .img-container:hover .btns {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            /* background-color: #555; */
+            color: white;
+            font-size: 16px;
+            /* padding: 12px 24px; */
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        
+        .img-container {
             height: 200px;
             width: 250px;
         }
-        .image-container img {
+        .img-container img {
             height: 100%;
             padding: 5px;
             object-fit: cover;
@@ -17,8 +49,11 @@
             height: 100%;
             z-index: 9999;
         }
+        .hide {
+            display: none;
+        }
     </style>
-<div class="row">
+    <div class="row">
         <div class="col-md-12">
             <div class="ibox">
                 <div class="ibox-title">
@@ -62,6 +97,7 @@
         </div>
 
     </div>
+    <input type="text" id="selected_id" class="hide">
     <div class="row">
         <div class="col-lg-12">
             <div class="ibox ">
@@ -89,6 +125,10 @@
 
                 </div>
             </div>
+        </div>
+        <!-- Image preview -->
+        <div class="">
+            @include('backend.gallery.modals.image-preview')
         </div>
 
     </div>
@@ -128,18 +168,7 @@
         })
 
         // load gallery images
-        $.ajax({
-            dataType: "json",
-            url: "/gallery/list",
-        }).done(function(data) {
-            if (data.length > 0) {
-                data.forEach(function(value) {
-                    console.log(data.length)
-                    var image = value.image;
-                    $('.lightBoxGallery').append('<a href="'+ image +  '" title="' + value.item.name +'" class="image-container" data-gallery=""><img src="' + image + '"></a>');
-                })
-            }
-        });
+        load_gallery();
 
         // apply filter
         $('#itemFilterForm').on('submit', function(e) {
@@ -163,5 +192,87 @@
                 }
             });
         })
+
+        // edit
+        $(document).on('click', '.bt-edit', function() {
+            var id = $(this).attr('id');
+            var image = $(this).attr('image')
+                    
+            $('#form').attr('action', '/gallery/changeImage/'+ id)
+            $('#selected_id').val(id);
+            $('.inmodal').attr('id', id)
+            $('.prvw').attr('id', 'preview'+id)
+            $('.new_image').attr('id', 'newimg'+id)
+            $('#img').attr('src', image)
+            $('.inmodal').modal()
+
+            var el = $(this)
+            if(!id) return;
+            var token = $('meta[name="csrf-token"]').attr('content')
+
+            $.ajax({
+                type: "POST",
+                dataType: 'JSON',
+                // url: "/gallery/delete/" + id,
+                data: {_method: 'delete',_token:token},
+                success: function (data) {
+                    if (data.success) {
+                        load_gallery();
+
+                        toastr.success(data.message);
+                    }
+                }
+            });
+        });
+
+        // delete
+        $(document).on('click', '.bt-del', function() {
+            var id = $(this).attr('id');
+            console.log(id);
+            if(!confirm("Are you sure you want to perform this action?")) return;
+
+            var el = $(this)
+            if(!id) return;
+            var token = $('meta[name="csrf-token"]').attr('content')
+
+            $.ajax({
+                type: "POST",
+                dataType: 'JSON',
+                url: "/gallery/delete/" + id,
+                data: {_method: 'delete',_token:token},
+                success: function (data) {
+                    if (data.success) {
+                        load_gallery();
+
+                        toastr.success(data.message);
+                    }
+                }
+            });
+        });
     })
+
+    function load_gallery() {
+        $.ajax({
+            dataType: "json",
+            url: "/gallery/list",
+        }).done(function(data) {
+            if (data.length > 0) {
+                $('.lightBoxGallery').empty();
+                data.forEach(function(value) {
+                    var image = value.image;
+                    $('.lightBoxGallery').append('\
+                    <div class="img-container">\
+                        <a href="'+ image +  '" title="' + value.item.name +'" class="image-container" data-gallery="">\
+                            <img src="' + image + '">\
+                        </a>\
+                        <div class="d-flex justify-content-between btns">\
+                            <button class="btn btn-success bt-edit btn-sm mr-1" id='+value.id+' image='+image+'><i class="fa fa-edit"></i></button>\
+                            <button class="btn btn-danger bt-del btn-sm" id='+value.id+'><i class="fa fa-trash"></i></button>\
+                        </div>\
+                    </div>'
+                    );
+                })
+            }
+        });
+    }
 </script>
